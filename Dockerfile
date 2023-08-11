@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:jammy
 
 WORKDIR /sim
 
@@ -8,9 +8,7 @@ RUN ./add-ubuntu-latest-apt-mirrors.sh \
   && apt update \
   && apt upgrade -y \
   && apt install -y \
-    gcc \
     gcc-multilib \
-    g++-multilib \
     netbase \
   && rm -rf /var/lib/apt/lists/*
 
